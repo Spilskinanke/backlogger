@@ -1,0 +1,77 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: bd13094ea8bb27b28b640904aa8d95d9c1e09a2f92ac1cb4bc7a177c35fe51ad
+
+name:           backlogger
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/backlogger#readme>
+homepage:       https://github.com/githubuser/backlogger#readme
+bug-reports:    https://github.com/githubuser/backlogger/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/backlogger
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_backlogger
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , directory
+    , filepath
+    , htaglib
+    , split
+    , text
+  default-language: Haskell2010
+
+executable backlogger-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_backlogger
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      backlogger
+    , base >=4.7 && <5
+    , directory
+    , filepath
+    , htaglib
+    , split
+    , text
+  default-language: Haskell2010
+
+test-suite backlogger-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_backlogger
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      backlogger
+    , base >=4.7 && <5
+    , directory
+    , filepath
+    , htaglib
+    , split
+    , text
+  default-language: Haskell2010
